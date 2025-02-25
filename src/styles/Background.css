@@ -12,6 +12,11 @@
 }
 
 @media only screen and (max-width: 768px) {
+    @supports (height: 100dvh) {
+        .background {
+            height: 100dvh
+        }
+    }
     .background {
         background-position: top center;
     }
