@@ -1,4 +1,6 @@
 {
-  "hello": "Hello",
-  "goodbye": "Goodbye"
+  "about": "About",
+  "events": "Events",
+  "reviews": "Reviews",
+  "contact": "Contact"
 }

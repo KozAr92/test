@@ -3,19 +3,14 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-color: var(--dark-main)
-}
-
-:root {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
+  background-color: var(--dark-main);
 
   font-family: "Montserrat";
   font-weight: 300;
   font-style: normal;
+}
 
+:root {
   --dark-main: #231f20;
   --gold-main: #8e793e;
   --gold-accent: #ad974f;

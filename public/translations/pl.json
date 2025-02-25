@@ -1,4 +1,6 @@
 {
-  "hello": "Cześć",
-  "goodbye": "Żegnaj"
+  "about": "O mnie",
+  "events": "Wydarzenia",
+  "reviews": "Recenzje",
+  "contact": "Kontakt"
 }
