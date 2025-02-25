@@ -1,0 +1,20 @@
+.main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--transparent);
+}
+
+.main-menu-item {
+    padding: 10px 20px 10px 20px;
+    font-size: var(--menu-font-size);
+    color: var(--gold-main);
+    cursor: pointer;
+}
+
+.main-menu-item:hover {
+    color: var(--gold-accent);
+}
