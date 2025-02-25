@@ -1,5 +1,5 @@
 import './styles/App.css'
-import {Home} from "./Home.tsx";
+import {Background} from "./Background.tsx";
 import {useEffect, useState} from "react";
 import {FormattedMessage, IntlProvider} from "react-intl";
 
@@ -22,16 +22,17 @@ function App() {
   }, [locale]);
 
   return (
-      <div>
-  <IntlProvider locale={locale} messages={messages}>
-   <FormattedMessage id={"hello"} defaultMessage={"Default hello"}/>
-    <select value={locale} onChange={(e) => setLocale(e.target.value)}>
-      <option value="en">English</option>
-      <option value="pl">Polish</option>
-    </select>
-  </IntlProvider>
-     <Home />
-      </div>
+  //     <div>
+  // <IntlProvider locale={locale} messages={messages}>
+    <Background />
+  //  <FormattedMessage id={"hello"} defaultMessage={"Default hello"}/>
+  //   <select value={locale} onChange={(e) => setLocale(e.target.value)}>
+  //     <option value="en">English</option>
+  //     <option value="pl">Polish</option>
+  //   </select>
+  // </IntlProvider>
+  //
+  //     </div>
   )
 }
 
