@@ -1,4 +1,4 @@
-import './App.css'
+import './styles/App.css'
 import {Home} from "./Home.tsx";
 import {useEffect, useState} from "react";
 import {FormattedMessage, IntlProvider} from "react-intl";
@@ -14,7 +14,7 @@ const loadTranslation = async (locale: string) => {
 };
 
 function App() {
-  const [locale, setLocale] = useState('en');
+  const [locale, setLocale] = useState('pl');
   const [messages, setMessages] = useState({});
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function App() {
   return (
       <div>
   <IntlProvider locale={locale} messages={messages}>
-   <FormattedMessage id={"hello"}/>
+   <FormattedMessage id={"hello"} defaultMessage={"Default hello"}/>
     <select value={locale} onChange={(e) => setLocale(e.target.value)}>
       <option value="en">English</option>
       <option value="pl">Polish</option>
