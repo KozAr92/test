@@ -1,5 +1,5 @@
 import "../styles/MainMenu.css"
-import {MainMenuItem, MainMenuItemProps} from "./MainMenuItem.tsx";
+import {MainMenuItem} from "./MainMenuItem.tsx";
 import {PAGES} from "../pages/pages.ts";
 import {LanguageSwitcher} from "./LanguageSwitcher.tsx";
 
@@ -8,13 +8,13 @@ type MainMenuProps = {
 }
 
 export const MainMenu = ({setLanguage}: MainMenuProps) => {
-    const menuItems = PAGES.reduce<MainMenuItemProps[]>((menuItems, page) => {
-        return [...menuItems, { label: page.id, id: page.id }];
+    const menuItems = PAGES.reduce<string[]>((pagesIds, page) => {
+        return [...pagesIds, page.id];
     }, []);
 
     return (
         <div className={"main-menu"}>
-            {menuItems.map((menuItem, i) => <MainMenuItem key={i} label={menuItem.label} id={menuItem.id} />)}
+            {menuItems.map((pageId, i) => <MainMenuItem key={i} id={pageId} />)}
             <LanguageSwitcher setLanguage={setLanguage} />
         </div>
     )

@@ -3,6 +3,7 @@ import {Background} from "./Background.tsx";
 import {MainMenu} from "./main-menu/MainMenu.tsx";
 import {useEffect, useState} from "react";
 import { IntlProvider} from "react-intl";
+import {PageContextProvider} from "./context/PageProvider.tsx";
 
 const loadTranslation = async (locale: string) => {
   try {
@@ -19,8 +20,6 @@ function App() {
   const [messages, setMessages] = useState({});
     const [translationsLoaded, setTranslationsLoaded] = useState(false);
 
-    console.log(setLocale)
-
     useEffect(() => {
         loadTranslation(locale).then((translations) => {
             setMessages(translations);
@@ -34,9 +33,11 @@ function App() {
 
     return (
         <IntlProvider locale={locale} messages={messages}>
+            <PageContextProvider translations={messages}>
             <Background>
                 <MainMenu setLanguage={setLocale} />
             </Background>
+            </PageContextProvider>
         </IntlProvider>
     );
 }

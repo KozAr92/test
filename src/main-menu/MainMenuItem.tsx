@@ -1,16 +1,20 @@
 import {FormattedMessage} from "react-intl";
+import {useContext} from "react";
+import {PageContext} from "../context/PageContext.tsx";
 
 export type MainMenuItemProps = {
-    label: string;
     id: string;
 }
 
-export const MainMenuItem = ({label, id}: MainMenuItemProps) => {
-    console.log(id)
-    console.log(label)
+export const MainMenuItem = ({id}: MainMenuItemProps) => {
+    const {setActivePage} = useContext(PageContext);
+
+    const handleSelect = () => {
+        setActivePage(id)
+    }
     return (
-        <div className={"main-menu-item"}>
-            <FormattedMessage id={label} defaultMessage={id}/>
+        <div className={"main-menu-item"} onClick={handleSelect}>
+            <FormattedMessage id={id} defaultMessage={id}/>
         </div>
     )
 }
