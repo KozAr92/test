@@ -42,3 +42,17 @@
     padding-right: 0;
     cursor: default;
 }
+
+@media only screen and (max-width: 768px) {
+    .main-menu {
+        font-size: 20px
+    }
+
+    .main-menu-item {
+        display: none
+    }
+
+    .language-switcher {
+        left:0
+    }
+}
