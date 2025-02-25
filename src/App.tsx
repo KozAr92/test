@@ -35,7 +35,7 @@ function App() {
     return (
         <IntlProvider locale={locale} messages={messages}>
             <Background>
-                <MainMenu />
+                <MainMenu setLanguage={setLocale} />
             </Background>
         </IntlProvider>
     );

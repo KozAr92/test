@@ -16,7 +16,7 @@ body {
   --gold-accent: #ad974f;
   --grey-accent: #d2d5dd;
   --font-grey: #eaeaea;
-  --transparent: rgba(0, 0, 0, 0.8);
+  --transparent: rgba(0, 0, 0, 0.6);
   --paragraph-font-size: min(1.5vw, 1.3em);
   --header-font-size: 4vh;
   --menu-font-size: min(1.5vw, 1.7em);

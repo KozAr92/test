@@ -6,15 +6,39 @@
     display: flex;
     justify-content: center;
     background-color: var(--transparent);
+
+    color: var(--gold-main);
+    font-size: var(--menu-font-size);
 }
 
 .main-menu-item {
     padding: 10px 20px 10px 20px;
-    font-size: var(--menu-font-size);
-    color: var(--gold-main);
     cursor: pointer;
 }
 
-.main-menu-item:hover {
+.main-menu-item:hover{
     color: var(--gold-accent);
+}
+
+.language-switcher {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.language-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.language-item:hover {
+    color: var(--gold-accent);
+}
+
+.language-item-divider {
+    padding-left: 0;
+    padding-right: 0;
+    cursor: default;
 }
