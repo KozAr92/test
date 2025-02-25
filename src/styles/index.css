@@ -24,4 +24,12 @@ body {
   --mobile-width: 768px;
 }
 
+@media only screen and (max-width: 768px) {
+  @supports (height: 100dvh) {
+    body {
+      height: 100dvh
+    }
+  }
+}
+
 
