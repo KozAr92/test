@@ -9,3 +9,14 @@
     font-size: 2.5rem;
     font-variant: small-caps;
 }
+
+@media only screen and (max-width: 768px) {
+    .home-header {
+        text-align: center;
+        top: auto;
+        left: auto;
+        bottom: 10%;
+        height: fit-content;
+        width: 100%;
+    }
+}
