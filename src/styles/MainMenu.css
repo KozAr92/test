@@ -45,14 +45,44 @@
 
 @media only screen and (max-width: 768px) {
     .main-menu {
-        font-size: 20px
+        font-size: 20px;
     }
 
-    .main-menu-item {
-        display: none
+    .mobile-menu {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .mobile-menu-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--transparent);
     }
 
     .language-switcher {
-        left:0
+        left:0;
+        width: auto
+    }
+
+    .mobile-menu-button {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        color: var(--gold-main);
+        font-size: 25px;
+        rotate: 90deg;
+        background: none;
+        border: none
+    }
+
+    .mobile-menu-content {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
     }
 }

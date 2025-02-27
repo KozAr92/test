@@ -8,6 +8,7 @@ type PageContextProviderProps = {
 
 export const PageContextProvider = ({translations, children  }: PageContextProviderProps) => {
     const [activePage, setActivePage] = useState<string | undefined>(undefined);
+    const [showMenu, setShowMenu] = useState<boolean>(false);
 
     const isMobile = () => {
         const width = window.innerWidth;
@@ -27,7 +28,7 @@ export const PageContextProvider = ({translations, children  }: PageContextProvi
     }, []);
 
     return (
-        <PageContext.Provider value={{ activePage, setActivePage, isMobileDevice, translations }}>
+        <PageContext.Provider value={{ activePage, setActivePage, showMenu, setShowMenu, isMobileDevice, translations }}>
             {children}
         </PageContext.Provider>
     );
