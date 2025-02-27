@@ -1,0 +1,11 @@
+.home-page {
+    color: var(--font-grey)
+}
+
+.home-header {
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    font-size: 2.5rem;
+    font-variant: small-caps;
+}

@@ -4,6 +4,8 @@ import {MainMenu} from "./main-menu/MainMenu.tsx";
 import {useEffect, useState} from "react";
 import { IntlProvider} from "react-intl";
 import {PageContextProvider} from "./context/PageProvider.tsx";
+import {HomePage} from "./home-page/HomePage.tsx";
+import {Footer} from "./footer/Footer.tsx";
 
 const loadTranslation = async (locale: string) => {
   try {
@@ -36,6 +38,8 @@ function App() {
             <PageContextProvider translations={messages}>
             <Background>
                 <MainMenu setLanguage={setLocale} />
+                <HomePage />
+                <Footer />
             </Background>
             </PageContextProvider>
         </IntlProvider>
