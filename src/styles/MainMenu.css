@@ -65,7 +65,7 @@
 
     .language-switcher {
         left:0;
-        width: auto
+        width: fit-content;
     }
 
     .mobile-menu-button {
@@ -77,7 +77,8 @@
         font-size: 25px;
         rotate: 90deg;
         background: none;
-        border: none
+        border: none;
+        z-index: 9999
     }
 
     .mobile-menu-content {

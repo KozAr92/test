@@ -23,9 +23,9 @@ export const MainMenu = ({setLanguage}: MainMenuProps) => {
 
     return (
         <div className={"main-menu"}>
-            <button className={"mobile-menu-button"} style={{rotate: "90deg"}} onClick={handleClick}>|||</button>
             {!isMobileDevice && menuItems.map((pageId, i) => <MainMenuItem key={i} id={pageId} />)}
             {isMobileDevice && <div className={"mobile-menu"}>
+            <button className={"mobile-menu-button"} style={{rotate: "90deg"}} onClick={handleClick}>|||</button>
                 {showMenu && <div className={"mobile-menu-content"}>
                     {menuItems.map((pageId, i) => <MainMenuItem key={i} id={pageId}/>)}
                 </div>}
