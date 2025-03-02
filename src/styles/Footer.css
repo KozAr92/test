@@ -8,3 +8,10 @@
     background-color: var(--transparent);
     color: var(--font-grey)
 }
+
+@media only screen and (max-width: 768px) {
+    .footer{
+        font-size: 7px;
+    }
+
+}
