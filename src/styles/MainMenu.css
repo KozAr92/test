@@ -44,8 +44,12 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .main-menu {
-        font-size: 20px;
+    .main-menu-item {
+        font-size: 30px;
+    }
+
+    .language-item {
+        font-size: 25px
     }
 
     .mobile-menu {

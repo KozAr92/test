@@ -11,7 +11,7 @@
 
 @media only screen and (max-width: 768px) {
     .footer{
-        font-size: 7px;
+        display: none;
     }
 
 }

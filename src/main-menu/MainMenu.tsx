@@ -30,7 +30,7 @@ export const MainMenu = ({setLanguage}: MainMenuProps) => {
                     {menuItems.map((pageId, i) => <MainMenuItem key={i} id={pageId}/>)}
                 </div>}
             </div>}
-            <LanguageSwitcher setLanguage={setLanguage} />
+            {isMobileDevice && showMenu && <LanguageSwitcher setLanguage={setLanguage}/>}
         </div>
     )
 }
