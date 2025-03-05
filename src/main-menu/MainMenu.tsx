@@ -15,6 +15,10 @@ export const MainMenu = ({setLanguage}: MainMenuProps) => {
         return [...pagesIds, page.id];
     }, []);
 
+    const showLanguageMenu = (isMobileDevice && showMenu) || !isMobileDevice
+
+    console.log("Show language menu", showLanguageMenu);
+
     const handleClick = () => {
         console.log(showMenu);
         console.log("Clicked")
@@ -30,7 +34,7 @@ export const MainMenu = ({setLanguage}: MainMenuProps) => {
                     {menuItems.map((pageId, i) => <MainMenuItem key={i} id={pageId}/>)}
                 </div>}
             </div>}
-            {isMobileDevice && showMenu && <LanguageSwitcher setLanguage={setLanguage}/>}
+            {showLanguageMenu && <LanguageSwitcher setLanguage={setLanguage}/>}
         </div>
     )
 }
